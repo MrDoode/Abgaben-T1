@@ -1,0 +1,59 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage{fullpage}
+\usepackage[inline]{showlabels}
+\usepackage{biblatex}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{gnuplot-lua-tikz}
+
+
+\bibliography{T1.bib}
+
+\title{Praktikum der physikalischen Chemie\\\large Versuch T1: Kalorimetrie}
+\author{Janosch Ehlers (jaeh@uni-bremen.de)\\ Samed Hür (huer@uni-bremen.de)\\\small Gruppe H \\\\ \textbf{Betreuer}: Arne Wittstock (awittstock@uni-bremen.de)}
+\date{25.11.2022}
+\begin{document}
+	\thispagestyle{empty}
+	\maketitle
+	\newpage
+
+	Ziel des Versuches ist es verschiedene Physikalische Größen zu bestimmen durch die Verbrennung von Saccharose.
+\input{Theorie.tex}
+\input{Durchführung.tex}
+\input{Auswertung.tex}
+\input{Zusatzfragen.tex}
+
+\begin{figure}
+	\centering
+
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb1.tex}
+		\caption{Temperaturdifferenzen der er}
+	\end{subfigure}
+	\hspace{5mm}
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb2.tex}
+		\caption{fig2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb3.tex}
+		\caption{fig2}
+	\end{subfigure}
+	\hspace{5mm}
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb4.tex}
+		\caption{fig2}
+	\end{subfigure}
+
+\end{figure}
+
+
+\printbibliography
+\end{document}
