@@ -7,12 +7,29 @@ Die Vertikale wurde so in die Abbildung gelegt, das beide Flächen gleich groß 
 Die Schnittpunkte der Vertikalen mit den Ausgleichgeraden, gibt die Temperaturdifferenz $\Delta T_\alpha$.
 Diese ist befreit von einigen Fehlern, die aus der Wärmestrahlung des Gerätes, sowie der Temperaturdifferenz zwischen Wasser und Bombe, entsteht.
 In Tabelle \ref{tab:1w} sind die berechneten Ausgleichsgeraden, die Vertikalen, Probengewichte, sowie die Temperaturdifferenzen dargestellt.
+
+\begin{table}[b]
+	\centering
+	\begin{tabular}{l|cccc}
+\hline
+	& Benzoesäure 1      & Benzoesäure 2 	    & Probe 1		   & Probe 2\\
+\hline
+\hline
+m / \unit{\gram}   			& $0,4962$                  & $0,5131                    $ & $2,0421              	$ & $2,1396$\\
+T1(t) / \unit{\second}  		& $0,0001+0,083$            & $0,0001+0,0475             $ & $0,0001+0,0594       	$ & $5,66\cdot 10^{-5}+0,0764$\\
+T2(t) / \unit{\second}			& $2,06\cdot 10^{-5}+1,415$ & $1,38\cdot 10^{-5}+1,425   $ & $-9,11\cdot 10^{-5}+3,252  $ & $-0,00012+3,414$\\
+t / \unit{\second}      		& $437,75$          	    & $436,65                    $ & $439,15              	$ & $440,05$\\
+$\Delta T_\alpha$ / \unit{\kelvin} 	& $1,298 $  	       	    & $1,341                     $ & $3,125               	$ & $3,26$\\
+\hline
+	\end{tabular}
+\caption{Ausgangs Daten aus der Messung}
+\label{tab:1w}
+\end{table}
+
 Gegeben wurden uns die spezifische Verbrennungsenthalpie von Benzoesäure mit \qty{26439}{\joule\per\gram}.
 Und der Verbrennungenthalpie der Baumwollfäden mit \qty{50}{\joule}.
 Daraus ergibt sich nach Gleichung \ref{eq:ww} der Wasserwert.
 Beispielhaft ist dies für die erste Benzoesäure-Tablette, mit \qty{0,4962}{\gram}, in Gleichung \ref{eqbsp:ww} berechnet
-
-
 Dies wurde analog für die Zweite Tablette durchgeführt.
 Die Temperaturdifferenzen der Proben sind in den Abbildungen \ref{abb:gummi1} und \ref{abb:gummi2} dargestellt.
 Deren $\Delta T_\alpha$ kann nun wieder über Gleichung \ref{eq:ww} in eine Wärmeenergie umgerechnet werden.
