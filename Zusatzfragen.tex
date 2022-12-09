@@ -1,15 +1,29 @@
 \section{Zusatzfragen}
 	\begin{enumerate}
 		\item \textbf{ Was versteht man unter adiabatischer und isothermer Kalorimetrie? In welche Gruppe gehört der  vorstehende Versuch?} \\
-		Bei der adiabatischen Kalorimetrie findet kein Wärmeaustausch statt und bei der isothermer Kalorimetrie bleibt die Temperatur konstant. 
-		Der durchgeführte versuch gehört zur adiabatischer Kalorimetrie. 
-	
+		Bei der adiabatischen Kalorimetrie findet kein Wärmeaustausch statt und bei der isothermen Kalorimetrie bleibt die Temperatur konstant. 
+		Der durchgeführte Versuch gehört zur adiabatischen Kalorimetrie.	
 		\item \textbf{ Was sind atomare Bildungsenthalpien?}\\
-		Atomare Bildungsenthalpien sind die Bildungsenthalpien der einzelnen Atomen. Auch atomisierungsenergie genannt.
+		Atomare Bildungsenthalpien sind die Bildungsenthalpien von den einzelnen Atomen. Auch Atomisierungsenergie genannt.
 		\item \textbf{ Warum muss nach der DIN-Vorschrift die Bombe vor der Verbrennung mit 5\ ml Wasser gefüllt werden? Welcher Fehler kann außerdem dadurch ausgeschlossen werden und wie groß ist er?}\\
-		Die Zugabe von Wasser hilft bei der Kondensation von Wasser und verhindert das frühzeitige stoppen der Reaktion. Wenn die Verbrennung vorzeitig abbricht wäre der Fehler sehr groß.   
+		Die Zugabe von Wasser hilft bei der Kondensation von Wasser und verhindert das frühzeitige Stoppen der Reaktion. Wenn die Verbrennung vorzeitig abbricht, wäre der Fehler sehr groß.   
 		\item  \textbf{ Wie groß ist der Fehler, wenn man bei der verbrannten Substanz näherungsweise Verbrennungsenthalpie und -energie gleichsetzt?}\\
-		Wenn wir eine isobare Messung durchführen ist der Fehler vernachlässigbar.
-		$dH = dQ \cdot Vdp$
-		Bei einer nicht isobaren Messung ist es ein großer Fehler.
+		Wenn wir eine isobare Messung durchführen, ist der Fehler vernachlässigbar.
+		$dH = dQ + pdV$
+		Bei einer nicht isobaren Messung ist liegt ein großer Fehler vor.
+		$dH = dQ + Vdp$
+		Gehen wir in unserem Fall von einem Isobaren Prozess aus, ist der Fehler Vernachlässigbar, da $dp=0$ ist und damit der gesamt zweite Term null ist.
+		In einem nicht isobaren System kann eine Abschätzung des Fehlers durch errechnen der Druckdifferenz nach dem Idealen Gasgesetz gemacht werden.
+		Für die Saccharose Verbrennung liegt nach Reaktionsgleichung \ref{eq:rkt} folgende Reaktionsgleichung vor:
+		$$ C_{12}H_{22}O_{11} + 12O_2 \rightarrow 12CO_2 + 11H_2O $$
+		Daraus ergibt sich ein $\Delta n$ von \qty{10}{\mole}
+		Das Volumen des reaktionsgefäßes ist irrelevant, da sich durch das Multiplizieren von der Druckänderung mit dem Volumen dieses herauskürzt, wenn die Druckänderung über das Ideale Gasgesetz errechnet wird.
+		Weiter wird eine Temperatur von \qty{300}{\kelvin} angenommen.
+		So folgt:
+		\begin{align*}
+			Vdp &= V\cdot\frac{\Delta nRT}{V}\\
+			&= \qty{10}{\mole}\cdot\qty{8,31446}{\joule\per\mole\per\kelvin}\cdot\qty{300}{\kelvin} \\
+			&= \qty{24943,38}{\joule}
+		\end{align*}	
+		$$ $$
 	\end{enumerate}

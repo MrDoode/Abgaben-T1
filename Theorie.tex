@@ -1,20 +1,37 @@
-\section{Theoretischer Hinterung}
+\section{Theoretischer Hintergrund}
 	Zur Bestimmung der entstehenden Verbrennungswärme benutzt man die kalorimetrische Bombe. 
 	Die Substanz wird unter Sauerstoffdruck verbrannt. 
-	Mit der freiwerdende Verbrennungswärme $Q_V$ kann durch Umrechnungen die freiwerdende Reaktionsenergie $\Delta U_R$ durch $m\cdot Q_V = n\Delta U_R$ ermittel werden.
+	Mit der frei werdenden Verbrennungswärme $Q_V$ kann durch Umrechnungen die frei werdende Reaktionsenergie ($U_R$) 
+	\begin{equation}
+		m\cdot Q_V = n\Delta U_R
+		\label{eq:UR}
+	\end{equation}
+	 ermittel werden.
 	Die folgende Reaktionsgleichung zeigt den allgemeinen Fall der Verbrennung einer Substanz:
-	 $	C_aH_bO_cN_d + \left( a + \frac{b}{4} - \frac{c}{2} \right) O_{2(g)} \rightarrow aCO_{2(g)} + \frac{b}{2} H_2O_{(1)} + \frac{d}{2} N_{2(g)} $ 
+	\begin{equation}
+	 	C_aH_bO_cN_d + \left( a + \frac{b}{4} - \frac{c}{2} \right) O_{2(g)} \rightarrow aCO_{2(g)} + \frac{b}{2} H_2O_{(1)} + \frac{d}{2} N_{2(g)} 
+		\label{eq:rkt}
+	\end{equation}
 	 Die Molzahldifferenz kann mit 
-	 $	\Delta \nu = \frac{c + d}{2} - \frac{b}{4} $ berechnet werden. 
+	\begin{equation}
+	 	\Delta \nu = \frac{c + d}{2} - \frac{b}{4}
+		\label{eq:nu}
+	\end{equation}  
+	berechnet werden. 
 	Der Wasserwert gibt  die Wärmekapazität des gesamten Systems wieder. 
 	Die Berechnung des Wasserwertes erfolgt mit der Formel:
-	 $	W = \frac{Q}{\Delta T} $
-	\section{Rechnung}
-	\begin{eqnarray}
-		C_aH_bO_cN_d + \left( a + \frac{b}{4} - \frac{c}{2} \right) O_{2(g)} \rightarrow aCO_{2(g)} + \frac{b}{2} H_2O_{(1)} + \frac{d}{2} N_{2(g)}\\	
-		\Delta \nu = \frac{c + d}{2} - \frac{b}{4}\\
-		W = \frac{Q}{\Delta T}\\
-		Q = \Delta T \cdot W\\
-		\Delta W = \frac{1}{\Delta T}\cdot Q\\
-		\Delta W = \frac{1}{1.2976\ K}\cdot 26439 \frac{J}{g}\cdot 0.0001\ g = 2.0376 \frac{J}{K}
-	\end{eqnarray}
+	\begin{equation}
+		W = \frac{Q}{\Delta T}  \wedge Q = \Delta T \cdot W
+		\label{eq:ww}
+	\end{equation}
+	Der Fehler des Wasserwertes kann über die gaußsche Fehlerfortpflanzung nach Gleichung \ref{eq:dW} oder über die Ermittlung des Mittelwertes bestimmt werden.
+	\begin{equation}
+		\Delta W_m = \sqrt{\left(\frac{\delta W_m}{\delta m}\cdot \Delta m\right)^2} = \frac{\Delta m \cdot Q}{\Delta T}\\	
+		\label{eq:dW}
+	\end{equation}
+	Der Fehler von $Q$, bzw. $Q_M$ wird analog über Gleichung \ref{eq:dQ} bestimmt.
+	\begin{equation}
+		\Delta Q_M = \sqrt{\left( \frac{\delta Q_M}{\delta m}\cdot \Delta m \right)^2 + \left( \frac{\delta Q_M}{\delta W}\cdot \Delta W \right)^2}
+     = \Delta T \cdot M \cdot \sqrt{\left( - \frac{\Delta m \cdot W}{m^2}\right)^2 + \left( \frac{\Delta W}{m}\right)^2}				
+		\label{eq:dQ}
+	\end{equation}

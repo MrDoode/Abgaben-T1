@@ -1,12 +1,43 @@
 \section{Auswertung}
-Zur Berechnung des Wasserwertes, sind die Temperaturdifferenzen über die Zeit in Abbildungen \ref{abb:benz1} und \ref{abb:Benz2} zu sehen.
-Es wurde eine Lineare Regressionsgerade über die ersten 6 Werte berechnet. 
-Eine Zweite wurde über die Letzen vier Werte gelegt.
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb1.tex}
+		\caption{Temperaturdifferenzen der ersten Benzoesäuremessung}
+		\label{abb:benz1}
+	\end{subfigure}
+	\hspace{5mm}
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb2.tex}
+		\caption{Temperaturdifferenzen der zweiten Benzoesäuremessung}
+		\label{abb:benz2}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb3.tex}
+		\caption{Temperaturdifferenzen der ersten Probenmessung}
+		\label{abb:gummi1}
+	\end{subfigure}
+	\hspace{5mm}
+	\begin{subfigure}{0.4\textwidth}
+		\centering
+		\input{./abb4.tex}
+		\caption{Temperaturdifferenzen der zweiten Probenmessung}
+		\label{abb:gummi2}
+	\end{subfigure}
+	\caption{Messdaten von der kalorimetrischen Bestimmung von Benzoesäure und Gummibärchen sowie die Ausgleichgeraden über die Daten vor und nach der Reaktion}
+\end{figure}
+Zur Berechnung des Wasserwertes, sind die Temperaturdifferenzen über die Zeit in Abbildungen \ref{abb:benz1} und \ref{abb:benz2} zu sehen.
+Es wurde eine lineare Regressionsgerade über die ersten 6 Werte berechnet. 
+Eine Zweite wurde über die Letzten vier Werte gelegt.
 Über Geogebra wurde die Fläche zwischen einer Vertikalen, den Messpunkten und den Ausgleichsgeraden berechnet.
-Die Vertikale wurde so in die Abbildung gelegt, das beide Flächen gleich groß sind.
-Die Schnittpunkte der Vertikalen mit den Ausgleichgeraden, gibt die Temperaturdifferenz $\Delta T_\alpha$.
-Diese ist befreit von einigen Fehlern, die aus der Wärmestrahlung des Gerätes, sowie der Temperaturdifferenz zwischen Wasser und Bombe, entsteht.
-In Tabelle \ref{tab:1w} sind die berechneten Ausgleichsgeraden, die Vertikalen, Probengewichte, sowie die Temperaturdifferenzen dargestellt.
+Die Vertikale wurde so in die Abbildung gelegt, dass beide Flächen gleich groß sind.
+Die Schnittpunkte der Vertikalen mit den Ausgleichgeraden gibt die Temperaturdifferenz $\Delta T_\alpha$.
+Diese ist befreit von Fehlern, die aus der Wärmestrahlung des Gerätes sowie der Temperaturdifferenz zwischen Wasser und Bombe entsteht.
+In Tabelle \ref{tab:1w} sind die berechneten Ausgleichsgeraden, die Vertikalen, Probengewichte sowie die Temperaturdifferenzen dargestellt.
 
 \begin{table}[b]
 	\centering
@@ -16,8 +47,8 @@ In Tabelle \ref{tab:1w} sind die berechneten Ausgleichsgeraden, die Vertikalen, 
 \hline
 \hline
 m / \unit{\gram}   			& $0,4962$                  & $0,5131                    $ & $2,0421              	$ & $2,1396$\\
-T1(t) / \unit{\second}  		& $0,0001+0,083$            & $0,0001+0,0475             $ & $0,0001+0,0594       	$ & $5,66\cdot 10^{-5}+0,0764$\\
-T2(t) / \unit{\second}			& $2,06\cdot 10^{-5}+1,415$ & $1,38\cdot 10^{-5}+1,425   $ & $-9,11\cdot 10^{-5}+3,252  $ & $-0,00012+3,414$\\
+T1(t) / \unit{\second}  		& $0,0001t+0,083$            & $0,0001t+0,0475             $ & $0,0001t+0,0594       	$ & $t\cdot 5,66e-5+0,0764$\\
+T2(t) / \unit{\second}			& $t\cdot 2,06e-5+1,415$ & $t\cdot 1,38e-5+1,425   $ & $t\cdot -9,11e-5 +3,252  $ & $t\cdot -0,00012+3,414$\\
 t / \unit{\second}      		& $437,75$          	    & $436,65                    $ & $439,15              	$ & $440,05$\\
 $\Delta T_\alpha$ / \unit{\kelvin} 	& $1,298 $  	       	    & $1,341                     $ & $3,125               	$ & $3,26$\\
 \hline
@@ -26,17 +57,70 @@ $\Delta T_\alpha$ / \unit{\kelvin} 	& $1,298 $  	       	    & $1,341           
 \label{tab:1w}
 \end{table}
 
-Gegeben wurden uns die spezifische Verbrennungsenthalpie von Benzoesäure mit \qty{26439}{\joule\per\gram}.
-Und der Verbrennungenthalpie der Baumwollfäden mit \qty{50}{\joule}.
+Gegeben wurden uns die spezifische Verbrennungsenthalpie von Benzoesäure mit \qty{26439}{\joule\per\gram}\cite{skript}.
+Und der Verbrennungsenthalpie der Baumwollfäden mit \qty{50}{\joule}.
 Daraus ergibt sich nach Gleichung \ref{eq:ww} der Wasserwert.
-Beispielhaft ist dies für die erste Benzoesäure-Tablette, mit \qty{0,4962}{\gram}, in Gleichung \ref{eqbsp:ww} berechnet
-Dies wurde analog für die Zweite Tablette durchgeführt.
+Beispielhaft ist dies für die erste Benzoesäure-Tablette mit \qty{0,4962}{\gram} und \qty{1,298}{\kelvin} berechnet.
+$$ \frac{\qty{0,4962}{\gram}\cdot\qty{26439}{\joule\per\gram}+\qty{50}{\joule}}{\qty{1,298}{\kelvin}} = \qty{10145,63}{\joule\per\kelvin}$$ 
+Dies wurde analog für die zweite Tablette durchgeführt.
+Wir erhalten folgende Wasserwerte: $W_1= \qty{10145,63}{\joule\per\kelvin}\wedge W_2=\qty{10156,03}{\joule\per\kelvin}$
+Daraus folgen ein mittlerer Wasserwert und eine Mittelwertabweichung von: $ \overline{W}=\qty{10152,52}{\joule\per\kelvin}, \Delta W = \qty{3,52}{\joule\per\kelvin}$.
+Die Mittelwertabweichung ist in diesem Fall der Gausßschen Fehlerfortpflanzung zu bevorzugen, da diese Größer ist.
+Außerdem würde sich nach der Gaußschen Fehlerfortpflanzung (Gleichung \ref{eq:dW}) ein Fehler von $\Delta W_1=\qty{2,04}{\joule\per\kelvin}\wedge\Delta W_2=\qty{1,97}{\joule\per\kelvin}$ ergeben.
+Berechnet ist dieser nach:
+$$\Delta W_m = \frac{0.0001\ g \cdot 26439 \frac{J}{g}}{1.2976\ K} = 2.0376 \frac{J}{K}$$  
+Der Gaußsche Fehler wäre nicht einmal groß genug, den Mittelwert einzuschließen.
 Die Temperaturdifferenzen der Proben sind in den Abbildungen \ref{abb:gummi1} und \ref{abb:gummi2} dargestellt.
-Deren $\Delta T_\alpha$ kann nun wieder über Gleichung \ref{eq:ww} in eine Wärmeenergie umgerechnet werden.
-Die Verbrennungswärme geteilt durch die Probenmasse gibt nun die Spezifsche Verbrennungswärme. 
-Da in unserem Versuch die Druckänderung nicht Null ist, kann die Spezifische verbrennungswärme nicht ohne weiteres mit der verbrennungsenthalpie gleichgesetzt werden.
-Allerdings liegen uns keine Werte über die Druckänderung vor, so definieren wir den Druck als konstant.
+Die erhaltenen $\Delta T_\alpha$ Werte können nun über Gleichung \ref{eq:ww} in eine Wärmeenergie umgerechnet werden.
+Die Verbrennungswärme, geteilt durch die Probenmasse gibt nun die spezifsche Verbrennungswärme. 
+Wird nun angenommen, dass die Probe ausschließlich aus Saccharose besteht, so kann über die molare Masse auf die molare Verbrennungsenthalpie von Saccharose geschlossen werden.
+Es ergibt sich folgender Zusammenhang:
+$$ W=\frac{Q}{\Delta T} \Rightarrow W\Delta T = Q \Rightarrow \frac{W\Delta T}{m} = Q_m \Rightarrow \frac{WM\Delta T}{m} = Q_M$$
+Für die erste Probenmessung mit $M=\qty{342,3}{\gram\per\mole}, \Delta T=\qty{3,124}{\kelvin}$ und $m=\qty{2,0421}{\gram}$, folgt eine molare Verbrennungsenthalpie von:
+$$ Q_{M1} = \frac{\qty{342,3}{\gram\per\mole}\cdot \qty{3,124}{\kelvin}\cdot\qty{10152,52}{\joule\per\kelvin}}{\qty{2,0421}{\gram}} = \qty{5317524,91}{\joule\per\mole}$$
+Aus dem zweiten Experiment ergibt sich eine molare Verbrennungsenthalpie von \\$Q_{M2}=\qty{-5294899,02}{\joule\per\mole}$.
+Der Fehler kann wieder über die Mittelwertabweichung oder der Gaußschen Fehlerfortpflanzung berechnet werden.
+Ermittelt wurde eine Mittelwertabweichung von $\overline{\Delta Q} = \qty{11312,94}{\joule\per\mole}$.
+Und ein gaußscher Fehler von $\Delta Q_{M1} = \qty{1842,21}{\joule\per\mole} \wedge \Delta Q_{M2}=\qty{1834,37}{\joule\per\mole}$.
+Beispielhaft ist der gaußsche Fehler mit  $\Delta T=\qty{3,1247}{\kelvin}, m=\qty{2,0421}{\gram}, W=\qty{10152
+52}{\joule\per\kelvin}$und$ \Delta W=\qty{3,517}{\joule\per\kelvin}$ wie folgt berechnet worden:
+\begin{align*}
+\Delta Q_M &=\qty{3,1247}{\kelvin}\cdot \qty{342,294}{\gram\per\mole}\cdot \sqrt{\left( - \frac{0,0001\ g \cdot \qty{10152,52}{\joule\per\kelvin}}{\qty{2,0421}{\gram}^2}\right)^2 + \left( \frac{\qty{3,517}{\joule\per\kelvin}}{\qty{2,0421}{\gram}}\right)^2}\\
+\Delta Q_M &= \qty{1860,53}{\joule\per\mole}
+\end{align*}
+Die Reaktionsenergie wird nun über die Gleichung \ref{eq:UR} bestimmt.
+Die Reaktionsenthalpie ergibt sich nun aus:
+$$ \Delta H_R = \Delta U_R + \Delta\nu RT$$
+In unserem Fall errechnet sich $\Delta\nu$ für Saccharose ($C_{12}H_{22}O_{11}$) nach:
+$$\Delta\nu = \frac{11+0}{2}-\frac{22}{4} = 0$$
+Damit ist die Verbrennungsenthalpie gleich der Reaktionsenergie.
+Die Standartbildungsenthalpie ist außerdem gleich:
+$$\Delta H_B = \nu_i\Delta H_{R,i}-\Delta H_R$$
+In unserem Fall ergibt sich mit $\Delta H_{RH} = \qty{-285,98}{\kilo\joule\per\mole}$ und  $\Delta H_{CR} = \qty{-393,42}{\kilo\joule\per\mole}$ eine Standartbildungsenergie von:
+$$\Delta H_B=22\cdot\qty{-285,98}{\kilo\joule\per\mole} + 12\cdot \Delta H_{CR} = \qty{-393,42}{\kilo\joule\per\mole} - \qty{11093,94}{\kilo\joule\per\mole}$$
+Damit hat Saccharose eine Standartbildungsenergie von: $\Delta H_B=\qty{-33200,48}{\kilo\joule\per\mole}$
+Eine Fehlerrechnung ist hier überflüssig, da hier kein zusätzlicher Fehler entsteht.
+
+Nach der Literatur \cite{atkins} liegt die molare Verbrennungsenthalpie bei \qty{-5645000}{\joule\per\mole}.
+Nach beiden Fehlerermittlungsmethoden liegt der Literaturwert nicht im Fehlerbereich. 
+Somit folgt, dass unsere Messung stärker fehlerbehaftet ist als vorher angenommen.
 Die erhaltenen  Ergebnisse können aus der Tabelle \ref{tab:erg} entnommen werden.
-Der Fehler der Wasserwerte ist zurückzuführen auf die Messunsicherheit, der Waage und somit nach Gleichung \ref{eq:dW} berechnet worden.
-Beispielhaft ist dies für die erste Benzoesäure-Tablette in Gleichung \ref{eqbsp:dW} gezeigt.
-Weiter ergiebt sich der Fehler des Spezifischen Verbrennungsenthalpie nach den Gleichungen \ref{eq:dQ} und \ref{eqbsp:dQ}.
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|cc}
+	& Messung 1 & Messung 2\\
+\hline
+$H_B$  /\unit{\joule\per\mole} 		& \multicolumn{2}{c}{-33200483,57}\\\\
+$U_R$  /\unit{\joule\per\mole} 		& 10858917,61    & 11328965,95\\
+$U_R$  /\unit{\joule\per\mole} 		& \multicolumn{2}{c}{11093941,78}\\\\
+$dQ$  /\unit{\joule\per\mole} 		& 1860,53        & 1850,99\\
+$dQ$  /\unit{\joule\per\mole} 		& \multicolumn{2}{c}{11312,94}\\\\
+$Q$   /\unit{\joule\per\mole} 		& 5317524,91     & 5294899,02\\\\
+$dW$  /\unit{\joule\per\mole\per\kelvin}	& 2,04           & 1,97\\
+$dW$  /\unit{\joule\per\mole\per\kelvin} 	& \multicolumn{2}{c}{3,52}\\\\
+$W$   /\unit{\joule\per\mole\per\kelvin}	& 10149          & 10156,03\\
+$W$   /\unit{\joule\per\mole\per\kelvin}	& \multicolumn{2}{c}{10152,52}\\
+\end{tabular}
+\caption{Ergebnisse der kalorimetrischen Messung von Benzoesäure und Saccharose}
+\label{tab:erg}
+\end{table}
